@@ -2,6 +2,8 @@ import 'package:ecommerce_supabase_admin/core/components/custom_search_field.dar
 import 'package:ecommerce_supabase_admin/core/functions/build_custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/components/custom_elevated_button.dart';
+
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -33,9 +35,25 @@ class _LoginViewState extends State<LoginView> {
               CustomField(
                 labelText: "Password",
                 controller: passwordController,
+                isPassword: true,
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CustomElevatedButton(
+                onPressed: () {},
+                child: const Text('Login'),
               )
             ],
           ),
         ));
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
   }
 }
