@@ -1,3 +1,5 @@
+import 'package:ecommerce_supabase_admin/core/functions/navigate_to.dart';
+import 'package:ecommerce_supabase_admin/features/products/view/edit_product.dart';
 import 'package:flutter/material.dart';
 
 import 'cache_image.dart';
@@ -17,7 +19,7 @@ class CustomProductCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CachImage(
+            CacheImage(
                 width: 200,
                 height: 150,
                 url:
@@ -41,7 +43,10 @@ class CustomProductCard extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                CustomElevatedButton(onPressed: () {}, child: Icon(Icons.edit))
+                CustomElevatedButton(
+                    onPressed: () =>
+                        navigateTo(context, const EditProductView()),
+                    child: const Icon(Icons.edit))
               ],
             ),
             SizedBox(

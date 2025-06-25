@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'custom_circle_pro_ind.dart';
 
-class CachImage extends StatelessWidget {
-  const CachImage(
+class CacheImage extends StatelessWidget {
+  const CacheImage(
       {super.key,
       required this.url,
       required this.width,
@@ -19,10 +19,10 @@ class CachImage extends StatelessWidget {
       imageUrl: url,
       height: height,
       width: width,
-      progressIndicatorBuilder: (context, url, downloadProgress) =>
-          const SizedBox(
-        height: 200,
-        child: CustomCircleProgIndicator(),
+      progressIndicatorBuilder: (context, url, downloadProgress) => SizedBox(
+        height: height,
+        width: width,
+        child: const CustomCircleProgIndicator(),
       ),
       errorWidget: (context, url, error) => const Icon(Icons.error),
     );
