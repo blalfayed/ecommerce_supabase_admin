@@ -13,7 +13,7 @@ class ProductsView extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView.builder(
-            itemBuilder: (context, index) => CustomProductCard(),
+            itemBuilder: (context, index) => const CustomProductCard(),
             itemCount: 10,
           ),
         ));

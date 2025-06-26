@@ -19,28 +19,28 @@ class CustomProductCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CacheImage(
+            const CacheImage(
                 width: 200,
                 height: 150,
                 url:
                     "https://sharkiatoday.com/wp-content/uploads/2016/08/htqg-5-jhfg-hpvwd-ugd-ih-td-lfp.jpg"),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Column(
               children: [
-                Text(
+                const Text(
                   "Product Name",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Product Discription",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CustomElevatedButton(
@@ -49,34 +49,35 @@ class CustomProductCard extends StatelessWidget {
                     child: const Icon(Icons.edit))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Column(
               children: [
-                Text(
+                const Text(
                   "Product Price",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Product Sale",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CustomElevatedButton(
-                    onPressed: () {}, child: Icon(Icons.comment))
+                    onPressed: () {}, child: const Icon(Icons.comment))
               ],
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: CustomElevatedButton(
                   onPressed: () {},
-                  child: Row(children: [Icon(Icons.delete), Text('Delete')])),
+                  child: const Row(
+                      children: [Icon(Icons.delete), Text('Delete')])),
             )
           ],
         ),

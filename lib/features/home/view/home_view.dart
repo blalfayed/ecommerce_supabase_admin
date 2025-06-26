@@ -18,8 +18,8 @@ class HomeView extends StatelessWidget {
             CustomElevatedButton(
                 width: MediaQuery.of(context).size.width * .3,
                 height: MediaQuery.of(context).size.height * .3,
-                onPressed: () => navigateTo(context, ProductsView()),
-                child: Column(
+                onPressed: () => navigateTo(context, const ProductsView()),
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -40,7 +40,7 @@ class HomeView extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .3,
               height: MediaQuery.of(context).size.height * .3,
               onPressed: () {},
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -58,7 +58,7 @@ class HomeView extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .3,
               height: MediaQuery.of(context).size.height * .3,
               onPressed: () {},
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
