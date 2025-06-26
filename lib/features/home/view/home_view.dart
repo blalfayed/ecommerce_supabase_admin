@@ -1,6 +1,7 @@
 import 'package:ecommerce_supabase_admin/core/components/custom_elevated_button.dart';
 import 'package:ecommerce_supabase_admin/core/functions/build_custom_app_bar.dart';
 import 'package:ecommerce_supabase_admin/core/functions/navigate_to.dart';
+import 'package:ecommerce_supabase_admin/features/add_product/views/add_product.dart';
 import 'package:ecommerce_supabase_admin/features/products/view/products_view.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,7 @@ class HomeView extends StatelessWidget {
             CustomElevatedButton(
               width: MediaQuery.of(context).size.width * .3,
               height: MediaQuery.of(context).size.height * .3,
-              onPressed: () {},
+              onPressed: () => navigateTo(context, AddProductView()),
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -50,7 +51,7 @@ class HomeView extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Icon(Icons.shopping_bag)
+                  Icon(Icons.add_circle_outline)
                 ],
               ),
             ),
