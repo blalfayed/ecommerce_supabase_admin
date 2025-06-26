@@ -1,4 +1,5 @@
 import 'package:ecommerce_supabase_admin/core/functions/navigate_to.dart';
+import 'package:ecommerce_supabase_admin/features/products/view/comments_view.dart';
 import 'package:ecommerce_supabase_admin/features/products/view/edit_product.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,8 @@ class CustomProductCard extends StatelessWidget {
                   height: 10,
                 ),
                 CustomElevatedButton(
-                    onPressed: () {}, child: const Icon(Icons.comment))
+                    onPressed: () => navigateTo(context, CommentsView()),
+                    child: const Icon(Icons.comment))
               ],
             ),
             Padding(
