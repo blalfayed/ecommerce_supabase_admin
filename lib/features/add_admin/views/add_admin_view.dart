@@ -11,38 +11,40 @@ class AddAdminView extends StatefulWidget {
 }
 
 class _AddAdminViewState extends State<AddAdminView> {
-  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildCustomAppBar(context, "Add Admin"),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            CustomField(controller: _nameController, labelText: "Name"),
-            SizedBox(
-              height: 20,
-            ),
-            CustomField(controller: _emailController, labelText: "Email"),
-            SizedBox(
-              height: 20,
-            ),
-            CustomField(
-              controller: _passwordController,
-              labelText: "Password",
-              isPassword: true,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            CustomElevatedButton(
-              onPressed: () {},
-              child: Text("Add"),
-            ),
-          ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              CustomField(controller: _emailController, labelText: "Email"),
+              SizedBox(
+                height: 20,
+              ),
+              CustomField(
+                controller: _passwordController,
+                labelText: "Password",
+                isPassword: true,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomElevatedButton(
+                onPressed: () {},
+                child: Text("Add"),
+              ),
+            ],
+          ),
         ),
       ),
     );

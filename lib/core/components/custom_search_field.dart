@@ -18,6 +18,12 @@ class CustomField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+        validator: (value) {
+          if (value!.isEmpty) {
+            return "This Field can't be Empty";
+          }
+          return null;
+        },
         obscureText: isPassword,
         cursorColor: AppColors.kBlackColor,
         controller: controller,
