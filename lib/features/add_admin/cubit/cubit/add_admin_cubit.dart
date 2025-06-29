@@ -22,6 +22,7 @@ class AddAdminCubit extends Cubit<AddAdminState> {
         emit(AddAdminError(msgError: response.data["msg"]));
       }
     } catch (e) {
+      print(e.toString());
       emit(AddAdminError(msgError: "Something Went Wrong, Please Try Again"));
     }
   }
